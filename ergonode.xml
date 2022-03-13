@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ErgoNode</Name>
+  <Repository>ergoplatform/ergo</Repository>
+  <Registry>https://hub.docker.com/r/ergoplatform/ergo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/Mrlafontaine/Unraid-ErgoNode</Project>
+  <Overview>Allows you to run a ERGO node on your unRAID server using the&#xD;
+OFFICIAL DOCKER.&#xD;
+&#xD;
+While syncing to the current height, your docker might crash &#xD;
+and it might take a wile (few hours to a day at most) depending &#xD;
+on your cpu and ram. &#xD;
+&#xD;
+Once the sync is done you can setup your wallet following&#xD;
+the blog: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup&#xD;
+- UI for the wallet can be found at [IP]:[PORT:9053]/panel&#xD;
+- For the swagger [IP]:[PORT:9053]/swagger&#xD;
+</Overview>
+  <Category>Other:</Category>
+  <WebUI>http://[IP]:[PORT:9053]/panel</WebUI>
+  <TemplateURL/>
+  <Icon>https://ergoplatform.org/img/uploads/1762.png</Icon>
+  <ExtraParams> -e MAX_HEAP=3G  --restart unless-stopped</ExtraParams>
+  <PostArgs> --mainnet -c /etc/myergo.conf</PostArgs>
+  <CPUset/>
+  <DateInstalled>1647213474</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Allows you to run a ERGO node on your unRAID server using the&#xD;
+OFFICIAL DOCKER.&#xD;
+&#xD;
+While syncing to the current height, your docker might crash &#xD;
+and it might take a wile (few hours to a day at most) depending &#xD;
+on your cpu and ram. &#xD;
+&#xD;
+Once the sync is done you can setup your wallet following&#xD;
+the blog: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup&#xD;
+- UI for the wallet can be found at [IP]:[PORT:9053]/panel&#xD;
+- For the swagger [IP]:[PORT:9053]/swagger&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9030</HostPort>
+        <ContainerPort>9030</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9053</HostPort>
+        <ContainerPort>9053</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ergo/data</HostDir>
+      <ContainerDir>/home/ergo/.ergo</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ergo/ergo.conf</HostDir>
+      <ContainerDir>/etc/myergo.conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Node data" Target="/home/ergo/.ergo" Default="/mnt/user/appdata/ergo/data" Mode="rw" Description="Container Path: /home/ergo/.ergo" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ergo/data</Config>
+  <Config Name="Node conf" Target="/etc/myergo.conf" Default="/mnt/user/appdata/ergo/ergo.conf" Mode="rw" Description="Container Path: /etc/myergo.conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ergo/ergo.conf</Config>
+  <Config Name="Peer port" Target="9030" Default="9030" Mode="tcp" Description="Container Port: 9030" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
+  <Config Name="Node swagger/panel" Target="9053" Default="" Mode="tcp" Description="Container Port: 9053" Type="Port" Display="always" Required="true" Mask="false">9053</Config>
+</Container>
