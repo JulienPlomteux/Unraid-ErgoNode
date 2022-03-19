@@ -72,8 +72,8 @@ the blog: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup&#xD;
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Node data" Target="/home/ergo/.ergo" Default="/mnt/user/appdata/ergo/data" Mode="rw" Description="Container Path: /home/ergo/.ergo" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ergo/data</Config>
-  <Config Name="Node conf" Target="/etc/myergo.conf" Default="/mnt/user/appdata/ergo/ergo.conf" Mode="rw" Description="Container Path: /etc/myergo.conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ergo/ergo.conf</Config>
+  <Config Name="Node data" Target="/home/ergo/.ergo" Default="/mnt/user/appdata/ergo/data" Mode="rw" Description="Path should point to the location you want your &amp;lt;br/&amp;gt; node's data to be (large file 10-20g)&#13;&#10;&amp;lt;br/&amp;gt; Ex: /mnt/user/appdata/ergo/data&#13;&#10;&amp;lt;br/&amp;gt; Container Path: /home/ergo/.ergo" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ergo2/data</Config>
+  <Config Name="Node conf" Target="/etc/myergo.conf" Default="" Mode="rw" Description="Path should point to the config file named ergo.conf &amp;lt;br/&amp;gt; Ex: /mnt/user/appdata/ergo/ergo.conf &#13;&#10;&amp;lt;br/&amp;gt; Container Path: /etc/myergo.conf " Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Peer port" Target="9030" Default="9030" Mode="tcp" Description="Container Port: 9030" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
   <Config Name="Node swagger/panel" Target="9053" Default="" Mode="tcp" Description="Container Port: 9053" Type="Port" Display="always" Required="true" Mask="false">9053</Config>
 </Container>
