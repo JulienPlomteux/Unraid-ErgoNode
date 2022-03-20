@@ -1,6 +1,9 @@
 # Unraid-ErgoNode
-Allows you to run a ERGO node on your unRAID server using the OFFICIAL DOCKER.  </br> While syncing to the current height, your docker might crash  and it might take a wile (few hours to a day at most) depending  on your cpu and ram.  </br> Once the sync is done you can setup your wallet following the blog: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup  </br> - UI for the wallet can be found at [IP]:[PORT:9053]/panel  </br> - For the swagger [IP]:[PORT:9053]/swagger </br> </br> If you have any questions send me a message at https://forums.unraid.net/profile/163009-mrlafontaine/
-
+Allows you to run a ERGO node on your unRAID server using the OFFICIAL DOCKER.  </br> While syncing to the current height, your docker might crash  and it might take a wile (few hours to a day at most) depending  on your cpu and ram.  </br> Once the sync is done you can setup your wallet following the blog: https://ergoplatform.org/en/blog/2019_12_02_how_to_setup  </br> - UI for the wallet can be found at [IP]:[PORT:9053]/panel  </br> - For the swagger [IP]:[PORT:9053]/swagger </br> 
+</br> If you have any questions send me a message at https://forums.unraid.net/profile/163009-mrlafontaine/ or on discord mrlafontaine#0504
+</br>
+<h4> Support me </h4>
+If you liked this guide and want to say thanks feel free to buy me a coffee: 9hWidxom5qCRtu4Bq3EjibVRSAhwMhvEC3DTf61jyzGapwvmTBR
 
 <h1> Installation Guide </h1>
   Before doing anything you will need to create a config file !
@@ -11,7 +14,6 @@ I have chosen to create the node in appdata/ergonode </br>
 </br>
 
 ![image](https://user-images.githubusercontent.com/60188215/159179520-e91668bd-8ecd-4493-b3e8-d31f807b50f0.png)
-
 
 </br>
 - Open the .txt file you just created and paste the following: </br>
